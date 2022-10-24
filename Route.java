@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Route {
+public class Route implements Comparable<Route>{
     private List<Car> cars;
     private double fitness;
 
@@ -53,5 +53,10 @@ public class Route {
 
     public void setFitness(double fitness) {
         this.fitness = fitness;
+    }
+
+    @Override
+    public int compareTo(Route route) {
+        return (int) (fitness - route.getFitness());
     }
 }

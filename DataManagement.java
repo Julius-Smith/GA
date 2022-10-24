@@ -16,7 +16,7 @@ public class DataManagement {
                 String[] tempStringArray = line.split(("\\s+"));
                 coordinatesXY.add(Double.parseDouble(tempStringArray[1]));
                 coordinatesXY.add(Double.parseDouble(tempStringArray[2]));
-                City city = new City(coordinatesXY, Double.parseDouble(tempStringArray[3]), tempStringArray[0],
+                City city = new City(coordinatesXY, Double.parseDouble(tempStringArray[3]), Integer.toString(Integer.parseInt(tempStringArray[0])-1),
                         Double.parseDouble(tempStringArray[4]), Double.parseDouble(tempStringArray[5]));
                 Configuration.INSTANCE.cities.put((Integer.parseInt(tempStringArray[0])) - 1, city);
             });
