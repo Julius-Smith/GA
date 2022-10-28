@@ -19,10 +19,10 @@ public enum Configuration {
     //travel time
     public final int serviceTime = 10;
     // genetic algorithm
-    public final int populationQuantity = 3000;
+    public final int populationQuantity = 3500;
     public final int maximumCountGeneration = 10000;
     public final double crossoverRate = 0.7;
-    public final double mutationRate = 0.03;
+    public final double mutationRate = 0.1;
     public final int truncationNumber = 300;
     public int countCities = 0;
     public List<List<Double>> distanceMatrix;

@@ -6,7 +6,7 @@ public class Fitness {
         double currentDistance = 0;
         int currentDemand;
         //penalty for time-window
-        int penalty = 0;
+        double penalty = 0;
 
         for (Car car : route.getCars()) {
             int tempVehicleCapacity = Configuration.INSTANCE.vehicleCapacity;
@@ -35,28 +35,31 @@ public class Fitness {
                 }
 
                 //punish fitness according to time window
-//
-//                    //setting time of car to start of window of first customer
-//                    int tempCustomerIndex = car.getRoute().get(i);
-//                    City tempCustomer = Configuration.cities.get(tempCustomerIndex);
-//                    int tempReadyTime = (int)tempCustomer.getReadyTime();
-//                    int tempDueTime = (int)tempCustomer.getDueTime();
-//                    if(car.getCurrentTime() < tempReadyTime){
-//                        car.setTime(tempReadyTime);
-//                    }
-//
-//                    if(car.getCurrentTime() > tempReadyTime) {
-//                        penalty +=  car.getCurrentTime() - tempReadyTime;
-//                    }
-//
-//                    car.updateTime();
 
+                    //setting time of car to start of window of first customer
+                    int tempCustomerIndex = car.getRoute().get(i);
+                    City tempCustomer = Configuration.cities.get(tempCustomerIndex);
+                    int tempReadyTime = (int)tempCustomer.getReadyTime();
+                    int tempDueTime = (int)tempCustomer.getDueTime();
+                    //if car is early, it will wait for ready time
+                    if(car.getCurrentTime() < tempReadyTime){
+                        car.setTime(tempReadyTime);
+                    }
+                    //if car is within window, no penalty
+                    if(car.getCurrentTime() >= tempReadyTime && car.getCurrentTime()<= tempDueTime) {
+                        penalty += 0; //car.getCurrentTime() - tempReadyTime;
+                    //else, penalty is time outside of window
+                    }else{
+                        penalty +=  car.getCurrentTime() - tempDueTime;
+                    }
+                    //update time by service time (i.e., 10)
+                    car.updateTime();
                 }
-
-
-
+            //set car time back to zero for future iterations
+            car.setTime(0);
             currentDistance += Configuration.INSTANCE.distanceMatrix.get(car.getRoute().get(listSize)).get(0);
         }
-        route.setFitness(currentDistance + (0.15)*penalty);
+        route.setFitness(currentDistance + ((0.15)*(penalty)));
     }
+
 }

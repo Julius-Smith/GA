@@ -55,7 +55,8 @@ public class GeneticAlgorithm {
             //mutate(children);
             inversionMutate(children);
 
-            removeLastNChromosomes(routes, (int) (Configuration.INSTANCE.randomGenerator.nextDouble() * routes.size() * (1 / 10.0)));
+            //this should go at end:
+            //removeLastNChromosomes(routes, (int) (Configuration.INSTANCE.randomGenerator.nextDouble() * routes.size() * (1 / 10.0)));
             addChildrenToPopulation(routes, children);
 
             for (Route route : routes) {
@@ -68,6 +69,9 @@ public class GeneticAlgorithm {
             }
 
             sort(routes);
+            //remove last N elements to maintain popsize
+            removeLastNChromosomesUpdated(routes);
+
         }
 
         System.out.println();
@@ -291,7 +295,7 @@ public class GeneticAlgorithm {
                 Collections.reverse(subL);
 
                 int tempArr[] = new int[subL.size()];
-                //avoids concurrent access java bug with modification of lists using sublists
+                //avoids concurrent access java bug with modification of original lists using sublists
                 for(int i = 0; i< subL.size(); i++){
                     tempArr[i] = subL.get(i);
                 }
@@ -319,6 +323,18 @@ public class GeneticAlgorithm {
             int indexToRemove = (int) ((population.size() - n) + Configuration.INSTANCE.randomGenerator.nextDouble() * n);
             population.remove(indexToRemove);
         }
+    }
+
+    private void removeLastNChromosomesUpdated(List<Route> population){
+        //routes sorted from line before method call
+        //workout items to remove
+        int toRemove = population.size() - Configuration.INSTANCE.populationQuantity;
+
+        for(int i = 0; i<toRemove; i++){
+            int index = population.size() - 1;
+            population.remove(index);
+        }
+
     }
 
     private void sort(List<Route> routes) {
