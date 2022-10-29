@@ -52,8 +52,12 @@ public class GeneticAlgorithm {
             // List<Route> matingPool = select(routes, Configuration.INSTANCE.truncationNumber);
 
             List<Route> children = orderCrossover(matingPool);
-            //mutate(children);
-            inversionMutate(children);
+
+            //does global mutation to explore completely different car routes
+            mutate(children);
+            //inversionMutate(children);
+            //does intra car exploration for adjacency purposes.
+            //inversionMutateIntra(children);
 
             //this should go at end:
             //removeLastNChromosomes(routes, (int) (Configuration.INSTANCE.randomGenerator.nextDouble() * routes.size() * (1 / 10.0)));
@@ -71,7 +75,6 @@ public class GeneticAlgorithm {
             sort(routes);
             //remove last N elements to maintain popsize
             removeLastNChromosomesUpdated(routes);
-
         }
 
         System.out.println();
@@ -86,6 +89,35 @@ public class GeneticAlgorithm {
         System.out.println("[best route]");
         Utility.printRoute(routes.get(0), Configuration.INSTANCE.cities);
 
+        boolean check = true;
+        for(Car car : routes.get(0).getCars()){
+            int listSize = car.getRoute().size() - 1;
+            for (int i = 0; i < listSize; i++) {
+                int tempCustomerIndex = car.getRoute().get(i);
+                City tempCustomer = Configuration.cities.get(tempCustomerIndex);
+                int tempReadyTime = (int)tempCustomer.getReadyTime();
+                int tempDueTime = (int)tempCustomer.getDueTime();
+                if(car.getCurrentTime() < tempReadyTime){
+                    car.setTime(tempReadyTime);
+                }
+                if(!(car.getCurrentTime() >= tempReadyTime && car.getCurrentTime()<= tempDueTime)) {
+                    check = false;
+                }
+                car.updateTime();
+            }
+        }
+
+        if(check == true){
+            System.out.println();
+            System.out.println("Time Window PASSED");
+            System.out.println("Final Distance: " + routes.get(0).getFitness());
+        }  else{
+            System.out.println();
+            System.out.println("Time Window FAILED");
+            System.out.println("Final Distance: " + routes.get(0).getFitness());
+        }
+
+
         System.out.println();
         System.out.println("countCrossover | " + countCrossover);
         System.out.println("countMutation  | " + countMutation);
@@ -99,7 +131,7 @@ public class GeneticAlgorithm {
         List<Route> tempMatingPool = new ArrayList<Route>();
         int currentMemberIndex = 0;
         //tournament size set to 10% of population
-        int k = (int) ((0.01) * Configuration.INSTANCE.populationQuantity);
+        int k = 3;//(int) ((0.001) * Configuration.INSTANCE.populationQuantity);
         //int k = (int) (Configuration.INSTANCE.randomGenerator.nextDouble()  * Configuration.INSTANCE.populationQuantity);
         //generate parents
         while(currentMemberIndex < limit){
@@ -254,9 +286,11 @@ public class GeneticAlgorithm {
                 currentChromosome.addAll(gene.getRoute());
             }
 
+            boolean mutate = false;
             for (Integer city : currentChromosome) {
                 if (Configuration.INSTANCE.randomGenerator.nextDouble() < Configuration.INSTANCE.mutationRate) {
                     countMutation++;
+                    mutate = true;
                     int tempIndex = currentChromosome.indexOf(city);
                     int tempValue = city;
                     int indexToSwap = (int) (Configuration.INSTANCE.randomGenerator.nextDouble() * Configuration.INSTANCE.countCities);
@@ -266,8 +300,11 @@ public class GeneticAlgorithm {
                 }
             }
 
-            Route mutatedRoute = Route.build(currentChromosome);
-            routes.add(mutatedRoute);
+            if(mutate == true){
+                Route mutatedRoute = Route.build(currentChromosome);
+                routes.add(mutatedRoute);
+            }
+
         }
     }
     public void inversionMutate(List<Route> children){
@@ -283,7 +320,13 @@ public class GeneticAlgorithm {
 
                 countMutation++;
                 int index1 = (int) (Configuration.INSTANCE.randomGenerator.nextDouble() * Configuration.INSTANCE.countCities);
-                int index2 = (int) (Configuration.INSTANCE.randomGenerator.nextDouble() * Configuration.INSTANCE.countCities);
+                //int index2 = (int) (Configuration.INSTANCE.randomGenerator.nextDouble() * Configuration.INSTANCE.countCities);
+                int index2 = index1 + (int) (Configuration.INSTANCE.randomGenerator.nextDouble() *5);
+
+                if(index2 > currentChromosome.size()-1){
+                    index2 = index1 - (int) (Configuration.INSTANCE.randomGenerator.nextDouble() *5);
+
+                }
 
                 if(index1 > index2 ){
                     int temp = index1;
@@ -310,6 +353,59 @@ public class GeneticAlgorithm {
         }
     }
 
+
+    //mutates routes within each car, rather than the global permutation.
+//    public void inversionMutateIntra(List<Route> children){
+//        for (Route child : children) {
+//            List<Integer> currentChromosome = new ArrayList<>();
+//
+//            for (Car gene : child.getCars()) {
+//                currentChromosome.addAll(gene.getRoute());
+//            }
+//
+//            boolean mutated = false;
+//            for(int k = (int) (Configuration.INSTANCE.countCities/Configuration.INSTANCE.vehicleQuantity);
+//                k <currentChromosome.size();
+//                k += (int) (Configuration.INSTANCE.countCities/Configuration.INSTANCE.vehicleQuantity)){
+//                if (Configuration.INSTANCE.randomGenerator.nextDouble()
+//                        < Configuration.INSTANCE.mutationRateIntra) {
+//
+//                    mutated = true;
+//                    countMutation++;
+//                    int lower = k - (Configuration.INSTANCE.vehicleQuantity) ;
+//                    int upper = k - 1;
+//                    int index1 = (int) (Configuration.INSTANCE.randomGenerator.nextDouble() * (upper - lower) + lower) ;
+//                    int index2 = (int) (Configuration.INSTANCE.randomGenerator.nextDouble() * (upper - lower) + lower) ;
+//
+//                    if(index1 > index2 ){
+//                        int temp = index1;
+//                        index1 = index2;
+//                        index2 = temp;
+//                    }
+//
+//                    List<Integer> subL = currentChromosome.subList(index1, index2);
+//                    Collections.reverse(subL);
+//
+//                    int tempArr[] = new int[subL.size()];
+//                    //avoids concurrent access java bug with modification of original lists using sublists
+//                    for(int i = 0; i< subL.size(); i++){
+//                        tempArr[i] = subL.get(i);
+//                    }
+//                    for(int i = 0; i< subL.size(); i++){
+//                        currentChromosome.set(index1,tempArr[i]);
+//                        index1++;
+//                    }
+//                }
+//            }
+//            if(mutated == true){
+//                //put this inside the if, so that it only adds mutated children to your population - original code was growing population
+//                Route mutatedRoute = Route.build(currentChromosome);
+//                routes.add(mutatedRoute);
+//            }
+//
+//        }
+//    }
+
     public Route getFittestChromosome(List<Route> routes) {
         return routes.get(0);
     }
@@ -329,10 +425,11 @@ public class GeneticAlgorithm {
         //routes sorted from line before method call
         //workout items to remove
         int toRemove = population.size() - Configuration.INSTANCE.populationQuantity;
+        int keep = (int)(Configuration.INSTANCE.populationQuantity * Configuration.INSTANCE.elitismRatio);
 
-        for(int i = 0; i<toRemove; i++){
-            int index = population.size() - 1;
-            population.remove(index);
+        for(int i = 0; i<=toRemove; i++){
+            int randomIndex = (int)(Configuration.INSTANCE.randomGenerator.nextDouble() * (population.size() - keep) + keep);
+            population.remove(randomIndex);
         }
 
     }

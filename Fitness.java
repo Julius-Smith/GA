@@ -59,7 +59,7 @@ public class Fitness {
             car.setTime(0);
             currentDistance += Configuration.INSTANCE.distanceMatrix.get(car.getRoute().get(listSize)).get(0);
         }
-        route.setFitness(currentDistance + ((0.15)*(penalty)));
+        route.setFitness(currentDistance + ((100)*(penalty)));
     }
 
 }

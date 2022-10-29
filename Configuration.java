@@ -14,15 +14,16 @@ public enum Configuration {
     public final Path path = Paths.get("instance.txt");
     public static final Map<Integer, City> cities = new TreeMap<>();
     // depot
-    public final int vehicleQuantity = 8;
+    public final int vehicleQuantity = 20;
     public final int vehicleCapacity = 200;
-    //travel time
-    public final int serviceTime = 10;
+
     // genetic algorithm
     public final int populationQuantity = 3500;
     public final int maximumCountGeneration = 10000;
-    public final double crossoverRate = 0.7;
-    public final double mutationRate = 0.1;
+    public final double crossoverRate = 0.2;
+    public final double mutationRate = 0.08;
+    public final double elitismRatio = 0.2;
+    //public final double mutationRateIntra = 0.08;
     public final int truncationNumber = 300;
     public int countCities = 0;
     public List<List<Double>> distanceMatrix;
