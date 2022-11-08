@@ -18,13 +18,13 @@ public enum Configuration {
     public final int vehicleCapacity = 200;
 
     // genetic algorithm
-    public final int populationQuantity = 3500;
+    public int populationQuantity = 3500;
     public final int maximumCountGeneration = 10000;
-    public final double crossoverRate = 0.2;
-    public final double mutationRate = 0.08;
-    public final double elitismRatio = 0.2;
+    public  double crossoverRate = 0.2;
+    public  double mutationRate = 0.08;
+    public  double elitismRatio = 0.2;
     //public final double mutationRateIntra = 0.08;
-    public final int truncationNumber = 300;
+    public  int truncationNumber = 1000;
     public int countCities = 0;
     public List<List<Double>> distanceMatrix;
 

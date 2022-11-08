@@ -12,7 +12,7 @@ public class Fitness {
             int tempVehicleCapacity = Configuration.INSTANCE.vehicleCapacity;
             int listSize = car.getRoute().size() - 1;
 
-            for (int i = 0; i < listSize; i++) {
+            for (int i = 0; i <= listSize; i++) {
                 if (i == 0) {
                     currentDistance += Configuration.INSTANCE.distanceMatrix.get(0).get(car.getRoute().get(0));
                 } else {
@@ -55,9 +55,8 @@ public class Fitness {
                     //update time by service time (i.e., 10)
                     car.updateTime();
                 }
-            //set car time back to zero for future iterations
-            car.setTime(0);
             currentDistance += Configuration.INSTANCE.distanceMatrix.get(car.getRoute().get(listSize)).get(0);
+            car.setTime(0);
         }
         route.setFitness(currentDistance + ((100)*(penalty)));
     }
