@@ -16,7 +16,7 @@ public class ParameterTuner {
             double bestM =0;
             double bestC = 0;
             //pop
-            for(int i = 1000; i<=3500; i+= 500){
+            for(int i = 1500; i<=3500; i+= 500){
                 Configuration.INSTANCE.populationQuantity = i;
                 //truncation
                 for(int j = 250; j<=250; j+=150) {
@@ -42,7 +42,7 @@ public class ParameterTuner {
                                 bestP = i;
                                 bestT = j;
                                 bestM = mutation;
-                                bestC =crossover;
+                                bestC = crossover;
                             }
                         }
                     }
