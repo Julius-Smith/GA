@@ -14,9 +14,11 @@ public class GeneticAlgorithm {
         DataManagement.readData();
     }
 
-    public String execute() {
+    //make return String for PT
+    public void execute() {
         routes = buildInitialPopulation();
-        return evolve();
+        //return evolve();
+        evolve();
     }
 
     private List<Route> buildInitialPopulation() {
@@ -35,7 +37,8 @@ public class GeneticAlgorithm {
         return routes;
     }
 
-    private String evolve() {
+    //make return string for PT
+    private void evolve() {
         int currentGeneration = 0;
         int bestFitness = Integer.MAX_VALUE;
 
@@ -118,7 +121,8 @@ public class GeneticAlgorithm {
         System.out.println("countCrossover | " + countCrossover);
         System.out.println("countMutation  | " + countMutation);
 
-        return Double.toString(routes.get(0).getFitness());
+        //For PT:
+       // return Double.toString(routes.get(0).getFitness());
     }
 
     private List<Route> select(List<Route> routes, int limit) {
