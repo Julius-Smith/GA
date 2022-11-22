@@ -15,10 +15,10 @@ public class GeneticAlgorithm {
     }
 
     //make return String for PT
-    public void execute() {
+    public String execute() {
         routes = buildInitialPopulation();
         //return evolve();
-        evolve();
+        return evolve();
     }
 
     private List<Route> buildInitialPopulation() {
@@ -38,7 +38,7 @@ public class GeneticAlgorithm {
     }
 
     //make return string for PT
-    private void evolve() {
+    private String evolve() {
         int currentGeneration = 0;
         int bestFitness = Integer.MAX_VALUE;
 
@@ -122,7 +122,7 @@ public class GeneticAlgorithm {
         System.out.println("countMutation  | " + countMutation);
 
         //For PT:
-       // return Double.toString(routes.get(0).getFitness());
+       return Double.toString(routes.get(0).getFitness());
     }
 
     private List<Route> select(List<Route> routes, int limit) {

@@ -5,7 +5,7 @@ public class ParameterTuner {
     public static void main(String args[]){
 
         try {
-            File file = new File("Parametertuning.txt");
+            File file = new File("Parametertuning2.txt");
             FileWriter fw = new FileWriter(file);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw);
@@ -32,12 +32,12 @@ public class ParameterTuner {
                             System.out.println(Configuration.INSTANCE.mutationRate);
                             System.out.println(Configuration.INSTANCE.crossoverRate);
 
-                            String Dist = Application.go();
+                            String Dist = ApplicationPT.go();
                             String output = "Popsize: " + Integer.toString(i) + "\nTruncation: " + Integer.toString(j) +
                                     "\nMuationR: " + Double.toString(mutation) + "\nCrossoverR: " + Double.toString(crossover)
                                     + "\nDistance:  " + Dist + "\n";
                             out.println(output);
-                            if(Double.parseDouble(Dist) >= best){
+                            if(Double.parseDouble(Dist) <= best){
                                 best = Double.parseDouble(Dist);
                                 bestP = i;
                                 bestT = j;

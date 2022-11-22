@@ -1,0 +1,605 @@
+Popsize: 1500
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.5
+Distance:  1892.237602357135
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.55
+Distance:  1862.913857022158
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.6000000000000001
+Distance:  1839.3221909107917
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.6500000000000001
+Distance:  1800.916210541128
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.5
+Distance:  1739.3835375458516
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.55
+Distance:  1803.5640659388387
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.6000000000000001
+Distance:  1852.3957599549676
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.6500000000000001
+Distance:  1843.332551820561
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.5
+Distance:  1823.375735452183
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.55
+Distance:  1894.2951378414498
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.6000000000000001
+Distance:  1814.4360016320268
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.6500000000000001
+Distance:  1899.072994001408
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.5
+Distance:  1852.452168876888
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.55
+Distance:  1818.476243651568
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.6000000000000001
+Distance:  1855.5115503088107
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.6500000000000001
+Distance:  1850.7476880220554
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.5
+Distance:  1962.2953961303494
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.55
+Distance:  1861.6666658855106
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.6000000000000001
+Distance:  1907.0754611455768
+
+Popsize: 1500
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.6500000000000001
+Distance:  1811.6945795362853
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.5
+Distance:  1842.2276457321627
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.55
+Distance:  1847.8985489830025
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.6000000000000001
+Distance:  1851.8369941086953
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.6500000000000001
+Distance:  1920.045491239574
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.5
+Distance:  1935.482135154348
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.55
+Distance:  1840.0914229820178
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.6000000000000001
+Distance:  1883.4616719756539
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.6500000000000001
+Distance:  1961.1178915314342
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.5
+Distance:  1907.6088607178858
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.55
+Distance:  1829.3201040680055
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.6000000000000001
+Distance:  1846.7311349494414
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.6500000000000001
+Distance:  1817.4724687275411
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.5
+Distance:  1849.871683968351
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.55
+Distance:  1819.502998779269
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.6000000000000001
+Distance:  1924.4563175681658
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.6500000000000001
+Distance:  1885.6493098912347
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.5
+Distance:  1794.0445402226483
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.55
+Distance:  1878.246907289702
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.6000000000000001
+Distance:  1900.6835204481467
+
+Popsize: 2000
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.6500000000000001
+Distance:  1967.757246848818
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.5
+Distance:  1801.1292936525697
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.55
+Distance:  1848.7188026230815
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.6000000000000001
+Distance:  1861.195410903182
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.6500000000000001
+Distance:  1857.1807570454962
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.5
+Distance:  1814.0609041006662
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.55
+Distance:  1779.5203254457676
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.6000000000000001
+Distance:  1868.0908887818605
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.6500000000000001
+Distance:  1835.123922281579
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.5
+Distance:  1809.785587722732
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.55
+Distance:  1873.0184875978505
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.6000000000000001
+Distance:  1885.0187940907535
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.6500000000000001
+Distance:  1914.6001088870396
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.5
+Distance:  1898.129489908775
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.55
+Distance:  1898.7861186533303
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.6000000000000001
+Distance:  1769.0901084728898
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.6500000000000001
+Distance:  1775.7317260601726
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.5
+Distance:  1831.4437377477338
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.55
+Distance:  1828.1983691483624
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.6000000000000001
+Distance:  1980.7498798401496
+
+Popsize: 2500
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.6500000000000001
+Distance:  1855.0682956598228
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.5
+Distance:  1824.6776772284509
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.55
+Distance:  1751.808154436154
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.6000000000000001
+Distance:  1933.9524976405462
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.6500000000000001
+Distance:  1873.8088858881872
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.5
+Distance:  1913.6511817188705
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.55
+Distance:  1854.4532014463284
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.6000000000000001
+Distance:  1766.4569437843163
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.6500000000000001
+Distance:  1992.953234757305
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.5
+Distance:  1795.5759108837337
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.55
+Distance:  1847.579630291735
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.6000000000000001
+Distance:  1902.7299252077307
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.6500000000000001
+Distance:  1850.0510519260515
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.5
+Distance:  1934.0482646128044
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.55
+Distance:  1836.3443787186525
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.6000000000000001
+Distance:  1886.527851401253
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.6500000000000001
+Distance:  1767.2894661259838
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.5
+Distance:  1804.6275539869637
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.55
+Distance:  1921.1888318799133
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.6000000000000001
+Distance:  1811.855330872413
+
+Popsize: 3000
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.6500000000000001
+Distance:  1998.6893561853096
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.5
+Distance:  1860.1111776221996
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.55
+Distance:  1944.7262598059629
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.6000000000000001
+Distance:  1849.1618428863494
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.001
+CrossoverR: 0.6500000000000001
+Distance:  1833.4248952265198
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.5
+Distance:  1873.2891270179286
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.55
+Distance:  1818.333446695074
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.6000000000000001
+Distance:  1759.2865999173227
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.6500000000000001
+Distance:  1909.9564932943213
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.5
+Distance:  1799.7020825302452
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.55
+Distance:  1924.3985669447793
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.6000000000000001
+Distance:  1819.4377227201594
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.003
+CrossoverR: 0.6500000000000001
+Distance:  1874.8211859263326
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.5
+Distance:  1891.1958635741516
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.55
+Distance:  1895.7411943491104
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.6000000000000001
+Distance:  1825.0333382308124
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.004
+CrossoverR: 0.6500000000000001
+Distance:  1815.7344993793017
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.5
+Distance:  1786.003192621443
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.55
+Distance:  1827.7639456887955
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.6000000000000001
+Distance:  1847.2515726535707
+
+Popsize: 3500
+Truncation: 250
+MuationR: 0.005
+CrossoverR: 0.6500000000000001
+Distance:  1866.5486523524435
+
+Best: 1739.3835375458516
+Popsize: 1500
+Truncation: 250
+MuationR: 0.002
+CrossoverR: 0.5
